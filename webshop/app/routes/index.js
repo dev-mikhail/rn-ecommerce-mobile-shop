@@ -1,5 +1,6 @@
 import React from 'react';
-import { createStackNavigator } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import Products from '../pages/Products';
 import Checkout from '../pages/Checkout';
 import Receipt from '../pages/Receipt';
@@ -11,7 +12,7 @@ const Route = createStackNavigator(
     Receipt: { screen: Receipt }
   },
   {
-    navigationOptions: {
+    defaultNavigationOptions: {
       headerStyle: {
         backgroundColor: themes.BACKGROUND_COLOR,
         paddingHorizontal: 10,
@@ -20,4 +21,4 @@ const Route = createStackNavigator(
     }
   }
 );
-export default Route;
+export default createAppContainer(Route);

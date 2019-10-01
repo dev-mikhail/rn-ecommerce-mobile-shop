@@ -6,10 +6,10 @@ import {
   FlatList,
 } from 'react-native';
 import { connect } from 'react-redux';
-import Product from '../components/Product/Product.component';
+import Product from '../components/Product.component';
 import { addToCart } from '../redux/actions/cartActions';
 import { fetchProducts } from '../redux/actions/productAction';
-import Logo from '../components/TopBar/Logo.component';
+import Logo from '../components/Logo.component';
 import Cart from '../components/Cart.component';
 class Products extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -47,7 +47,8 @@ class Products extends Component {
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: '#eee'
   },
   body: {
     flex: 1,
